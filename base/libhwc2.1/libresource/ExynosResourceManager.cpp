@@ -139,7 +139,7 @@ ExynosResourceManager::ExynosResourceManager(ExynosDevice *device)
     hasHdrLayer(false),
     hasDrmLayer(false),
     mFormatRestrictionCnt(0),
-    mDstBufMgrThread(sp<DstBufMgrThread>::make(this))
+    mDstBufMgrThread(new DstBufMgrThread(this))
 {
 
     memset(mSizeRestrictionCnt, 0, sizeof(mSizeRestrictionCnt));
